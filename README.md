@@ -53,4 +53,13 @@
   * Create **reports folder** => with json & html sub-folders
 
 
-  Commands:
+### Command to Run
+
+**without Tag** 
+
+        npm run autoExecute
+ 
+ **with Tag** 
+
+    npm run autoExecute -- --cucumberOpts.tags="@Sample"
+
