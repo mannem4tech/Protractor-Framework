@@ -1,5 +1,6 @@
 import { browser, protractor, element, by } from 'protractor';
 import { Given, Then } from 'cucumber';
+// import { ProtractorHelper } from 'ts-protractor-helper';
 import chai = require("chai");
 const until = protractor.ExpectedConditions;
 const expect = chai.expect;
@@ -7,8 +8,7 @@ const delay = require('timeout-as-promise');
 Given(/^I will naviagte to the "([^"]*)" url$/, async function (argUrl: string): Promise<void> {
     await browser.get(argUrl);
     await browser.sleep(2000);
-    let currentTitle = await browser.getTitle();
-    this.attach(currentTitle);
+   // await ProtractorHelper.browser.customMessage(this, await browser.getTitle());
     return Promise.resolve();
 });
 
