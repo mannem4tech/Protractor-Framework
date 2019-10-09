@@ -8,6 +8,7 @@ chai.use(chaiAsPromised);
 let runID = runid.generate().toUpperCase();
 export let config: Config = {
   directConnect: false,
+  SELENIUM_ADDRESS: "http://hub-cloud.browserstack.com/wd/hub",
   ignoreUncaughtExceptions: true,
   // SELENIUM_PROMISE_MANAGER: true,
   capabilities: {
@@ -43,7 +44,7 @@ export let config: Config = {
     'require-module': path.join(__dirname, '/..') + '/node_modules/ts-node/register',
     format: `json:reports/json/${runID}_report.json`,
     require: [
-     path.join(__dirname, '/..') + '/steps/*.ts',
+      path.join(__dirname, '/..') + '/steps/*.ts',
     ],
     tags: '@Tag or @auto'
   }
