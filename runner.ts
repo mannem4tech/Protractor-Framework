@@ -7,7 +7,7 @@ import chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 let runID = runid.generate().toUpperCase();
 export let config: Config = {
-  directConnect: true,
+  directConnect: false,
   ignoreUncaughtExceptions: true,
   // SELENIUM_PROMISE_MANAGER: true,
   capabilities: {
