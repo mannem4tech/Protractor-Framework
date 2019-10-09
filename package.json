@@ -6,7 +6,7 @@
   "scripts": {
     "compile": "tsc",
     "clean": "rimraf ./scripts && rimraf ./reports/json/*.json && rimraf ./reports/html/*.html",
-    "update": "webdriver-manager update",
+    "update": "webdriver-manager update && node node_modules/protractor/bin/webdriver-manager update",
     "autoExecute": "npm run clean && npm run compile && protractor scripts/runner.js"
   },
   "repository": {
