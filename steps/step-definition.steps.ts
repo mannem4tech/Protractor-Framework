@@ -8,7 +8,7 @@ const delay = require('timeout-as-promise');
 Given(/^I will naviagte to the "([^"]*)" url$/, async function (argUrl: string): Promise<void> {
     await browser.get(argUrl);
     await browser.sleep(2000);
-   // await ProtractorHelper.browser.customMessage(this, await browser.getTitle());
+    // await ProtractorHelper.browser.customMessage(this, await browser.getTitle());
     return Promise.resolve();
 });
 
