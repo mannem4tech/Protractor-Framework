@@ -42,7 +42,7 @@
          }   
 
   * Create **.gitignore**
-  * Create **runner.ts** // [config.ts](https://github.com/angular/protractor/blob/master/lib/config.ts)
+  * Create **runner.ts** // [config.ts](https://github.com/angular/protractor/blob/master/lib/config.ts) & [cucumber-framework](https://www.npmjs.com/package/protractor-cucumber-framework)
   * Create **hooks.ts** // [hooks.md](https://github.com/cucumber/cucumber-js/blob/master/docs/support_files/hooks.md)
   * Create [**features folder**](https://github.com/cucumber/cucumber-js/blob/master/features/background.feature)
     * In this folder create files with extension .feature
