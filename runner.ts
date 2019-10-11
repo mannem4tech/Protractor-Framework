@@ -7,8 +7,7 @@ import chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 let runID = runid.generate().toUpperCase();
 export let config: Config = {
-  directConnect: false,
-  SELENIUM_ADDRESS: "http://hub-cloud.browserstack.com/wd/hub",
+  directConnect: true,
   ignoreUncaughtExceptions: true,
   // SELENIUM_PROMISE_MANAGER: true,
   capabilities: {
