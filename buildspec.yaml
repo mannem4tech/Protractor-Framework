@@ -2,16 +2,18 @@
 version: 0.2
 phases:
   install:
+  run-as: ATDD User
     runtime-versions:
       nodejs: 12.x
     commands:
-      - nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --host=tcp://127.0.0.1:2375 --storage-driver=overlay2&
-      - timeout 15 sh -c "until docker info; do echo .; sleep 1; done"
+#       - nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --host=tcp://127.0.0.1:2375 --storage-driver=overlay2&
+#       - timeout 15 sh -c "until docker info; do echo .; sleep 1; done"
   pre_build:
     commands:
-      #- npm install
-      #- npm install webdriver-manager -g
-      #- webdriver-manager update
+      - npm install
+      - npm install webdriver-manager -g
+      - webdriver-manager update
+      - npm run autoExecute
   build:
     commands:
       - node -v
